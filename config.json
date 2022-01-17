@@ -1,0 +1,44 @@
+{
+"config_file_bucket" : "dev-data-lake-ds-raw-eu-west-1-239126490696",
+"config_file_key" : "Config_files/config.json",
+"Target_table_columns" : ["study_code","view","data"],
+"view_names_list" : ["AE", "DS", "ecoa","site","ENROL","IxRS","Death","SAS","SSOT","CLINICALVIEWS"],
+"folder_na_list" : ["ecoa","IxRS","SSOT"],
+"source_files" : {
+"AE": {
+		"key columns": ["project", "Folder"]
+	  },
+"site": {
+		 "key columns": ["study_code", "view_id"]
+	   },
+"ENROL": {
+		"key columns": ["project", "Folder"]
+	   },
+"IxRS" : {
+		"key columns": ["ProtocolID", "Folder"]
+	   },
+"DEATH" : { 
+		"key columns": ["project", "Folder"]
+	   },
+"DS" : {
+		"key columns": ["project", "Folder"]
+	   },
+"ecoa" : { 
+		"key columns": ["Study", "Folder"]
+	   },
+"SURVIVE" : { 
+		"key columns": ["project", "Folder"]
+	   },
+"SAS" : {
+        "key columns": ["STUDY", "Folder"]	
+		},
+"SSOT" : {
+		"key columns": ["StudyCode", "FileId_VendorShortName"],
+		"Header": ["source_timestamp", "load_timestamp"]
+		},
+"Clinical_View" : {
+        "key columns": ["project", "View_id_vendor_shortname"]
+		}
+  }
+}
+	  
